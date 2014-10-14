@@ -1,0 +1,77 @@
+body { 
+    background: url(../images/bcg.gif);
+    font-family: Verdana;
+    font-size: 1em !important;
+    color: beige;
+    width: auto;
+}
+h1 {
+
+}
+.container {
+    width: auto;
+}
+.border {
+    border: #000 thin solid;
+}
+.langBox{
+    display: box;
+    z-index: 10;
+}
+.langBox a {
+    color: white;
+    font-size: 11px;
+}
+
+.menu{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    float: left;    
+}
+.menu li {
+    border-bottom: solid 1px grey;
+    /*display: block;*/
+    height: 40px;
+    width: 200px;
+    line-height: 2.5em;
+    padding-left: 10px;
+}
+.menu li:hover{
+    background-color: background;
+}
+.menu li a {
+    text-decoration: none;
+    color: white;
+}
+#topLeftImages {
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+.etabs { margin: 0; padding: 0; }
+.tab { 
+    display: inline-block; zoom:1; *display:inline; 
+    background: #333333; 
+    border: solid 1px #999; 
+    border-bottom: none; 
+    -moz-border-radius: 4px 4px 0 0; 
+    -webkit-border-radius: 4px 4px 0 0; 
+
+}
+.tab a { 
+    text-decoration: none;
+    color: greenyellow;
+    font-size: 14px; line-height: 2em; display: block; padding: 0 10px; outline: none; }
+.tab a:hover { 
+    text-decoration: underline; 
+}
+.tab.active { 
+    background: #999; padding-top: 6px; 
+    position: relative; top: 1px; border-color: #666; }
+.tab a.active { font-weight: bold; }
+.tab-container .panel-container { 
+    background: #fff; border: solid #666 1px; 
+    padding: 10px; -moz-border-radius: 0 4px 4px 4px; -webkit-border-radius: 0 4px 4px 4px; }
+.tab-container{
+    float: left;
+}

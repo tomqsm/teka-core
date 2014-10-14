@@ -1,0 +1,16 @@
+.flagLang {
+   width:20px;
+   height:20px;
+   background: url(../images/sprite.png) 0px 0px;
+}
+
+.langText{
+    text-align: center;
+}
+.langText a {
+    float: left;
+    display: block;
+    height: 20px;
+    padding-top: 20px;
+    text-decoration: none;
+}

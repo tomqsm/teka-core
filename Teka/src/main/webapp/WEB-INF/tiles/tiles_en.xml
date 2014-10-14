@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+       
+    <definition name="masterpage_en" extends="masterpage">
+        <!--menu format menuDisplay|href|id|breadcrumbDisplay-->
+        <put-attribute name="builtDatePrefix" value="built:" />
+        <put-attribute name="builtDate" value="${built.date}" />
+        <put-list-attribute name="menuList">
+            <add-attribute value="Floors and carpentry.|/|home|Home"/>
+            <add-attribute value="Prices|/cennik|cennik|Price list"/>
+            <add-attribute value="Contact|/kontakt|kontakt|Contact details"/>
+            <add-attribute value="Firm|/firma|firma|About lukasfloor"/>
+        </put-list-attribute>
+    </definition>
+    
+    <definition extends="masterpage_en" name="index">
+        <!--here you can add your own page specific scripts-->
+        <put-attribute name="pagejs" value="resources/pages/index/page.js" />
+        <put-attribute name="body" value="/WEB-INF/views/index/index_en.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/shared/menu_en.jsp" />
+    </definition>
+       
+    <definition extends="masterpage_en" name="cennik">
+        <!--here you can add your own page specific scripts-->
+        <put-attribute name="pagejs" value="resources/pages/index/page.js" />
+        <put-attribute name="body" value="/WEB-INF/views/index/cennik_en.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/shared/menu_en.jsp" />
+        <put-list-attribute name="breadcrumbList" inherit="true">
+            <add-attribute value="1"/>
+        </put-list-attribute>
+    </definition>
+    
+    <definition extends="masterpage_en" name="kontakt">
+        <!--here you can add your own page specific scripts-->
+        <put-attribute name="pagejs" value="resources/pages/index/page.js" />
+        <put-attribute name="body" value="/WEB-INF/views/index/kontakt_en.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/shared/menu_en.jsp" />
+        <put-list-attribute name="breadcrumbList" inherit="true">
+            <add-attribute value="2"/>
+        </put-list-attribute>
+    </definition>
+    <definition extends="masterpage_en" name="firma">
+        <!--here you can add your own page specific scripts-->
+        <put-attribute name="pagejs" value="resources/pages/index/page.js" />
+        <put-attribute name="body" value="/WEB-INF/views/index/firma_en.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/shared/menu_en.jsp" />
+        <put-list-attribute name="breadcrumbList" inherit="true">
+            <add-attribute value="3"/>
+        </put-list-attribute>
+    </definition>
+    
+    <definition extends="m-masterpage" name="index-mobile">
+        <put-attribute name="title" value="mobile" type="string"  />
+        <put-attribute name="pagejs" value="resources/pages/index/page.js" />
+        <put-attribute name="body" value="/WEB-INF/views/index/m-index.jsp" />
+    </definition>
+    
+</tiles-definitions>

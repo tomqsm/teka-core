@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    
+    <definition name="masterpage" template="/WEB-INF/tiles/masterpage.jsp">
+        <put-attribute name="title" value="default" type="string" cascade="true"/>
+        <put-attribute name="lang" value="/WEB-INF/views/shared/lang.jsp" />
+        <put-attribute name="flashAdvert" value="/WEB-INF/views/shared/flashAdvert.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/shared/menu_pl.jsp" />
+        <put-attribute name="breadcrumbs" value="/WEB-INF/views/shared/breadcrumbs.jsp" />
+        <put-attribute name="builtDatePrefix" value="zaktualizowano:" />
+        <put-attribute name="builtDate" value="${built.date}" />
+        <put-list-attribute name="breadcrumbList">
+            <add-attribute value="0"/>
+        </put-list-attribute>
+        <!--menu format menuDisplay|href|id|breadcrumbDisplay-->
+        <put-list-attribute name="menuList">
+            <add-attribute value="Strona startowa.|/|home|Strona startowa"/>
+            <add-attribute value="Cennik|/cennik|cennik|Cennik usług"/>
+            <add-attribute value="Kontakt|/kontakt|kontakt|Dane kontaktowe"/>
+            <add-attribute value="Firma|/firma|firma|Informacje o firmie"/>
+        </put-list-attribute>
+    </definition>
+    <definition name="btstrp" template="/WEB-INF/tiles/btstrptemplate.jsp">
+        
+    </definition>
+    
+    <definition name="m-masterpage" template="/WEB-INF/tiles/m-masterpage.jsp">
+        <put-attribute name="title" value="default" type="string" cascade="true"/>
+        <put-attribute name="lang" value="/WEB-INF/views/shared/lang.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/views/shared/menu_pl.jsp" />
+    </definition>
+    
+    <definition extends="btstrp" name="index">
+        
+    </definition>
+
+    <definition extends="masterpage" name="cennik">
+        <!--here you can add your own page specific scripts-->
+        <put-attribute name="pagejs" value="/resources/scripts/index/cennik.js" />
+        <!--<put-attribute name="pagejs" value="" />-->
+        <put-attribute name="body" value="/WEB-INF/views/index/cennik.jsp" />
+        <!--this references index in menuList-->
+        <put-list-attribute name="breadcrumbList" inherit="true">
+            <add-attribute value="1"/>
+        </put-list-attribute>
+    </definition>
+    
+    <definition extends="masterpage" name="kontakt">
+        <!--here you can add your own page specific scripts-->
+        <put-attribute name="pagejs" value="resources/pages/index/page.js" />
+        <put-attribute name="body" value="/WEB-INF/views/index/kontakt.jsp" />
+        <put-list-attribute name="breadcrumbList" inherit="true">
+            <add-attribute value="2"/>
+        </put-list-attribute>
+    </definition>
+    <definition extends="masterpage" name="firma">
+        <!--here you can add your own page specific scripts-->
+        <put-attribute name="pagejs" value="resources/pages/index/page.js" />
+        <put-attribute name="body" value="/WEB-INF/views/index/firma.jsp" />
+        <put-list-attribute name="breadcrumbList" inherit="true">
+            <add-attribute value="3"/>
+        </put-list-attribute>
+    </definition>
+    
+    <definition extends="masterpage" name="404">
+        <put-attribute name="title" value="Zasób nie znaleziony." type="string"  />
+        <!--here you can add your own page specific scripts-->
+        <put-attribute name="pagejs" value="resources/pages/index/page.js" />
+        <put-attribute name="body" value="/WEB-INF/views/errors/404.jsp" />
+    </definition>
+    <definition extends="masterpage" name="500">
+        <put-attribute name="title" value="Błąd 500." type="string"  />
+        <!--here you can add your own page specific scripts-->
+        <put-attribute name="pagejs" value="resources/pages/index/page.js" />
+        <put-attribute name="body" value="/WEB-INF/views/errors/500.jsp" />
+    </definition>
+    <definition extends="masterpage" name="appInfo">
+        <!--here you can add your own page specific scripts-->
+        <put-attribute name="pagejs" value="/resources/scripts/index/appInfo.js" />
+        <!--<put-attribute name="pagejs" value="" />-->
+        <put-attribute name="body" value="/WEB-INF/views/index/appInfo.jsp" />
+        <!--this references index in menuList-->
+        <put-attribute name="title" value="default" type="string" cascade="true"/>
+        <put-attribute name="lang" value="" />
+        <put-attribute name="flashAdvert" value="" />
+        <put-attribute name="menu" value="" />
+        <put-attribute name="breadcrumbs" value="" />
+<!--        <put-list-attribute name="breadcrumbList">
+            <add-attribute value="0"/>
+        </put-list-attribute>
+        menu format menuDisplay|href|id|breadcrumbDisplay
+        <put-list-attribute name="menuList">
+            <add-attribute value="Strona startowa.|/|home|Strona startowa"/>
+            <add-attribute value="Cennik|/cennik|cennik|Cennik usług"/>
+            <add-attribute value="Kontakt|/kontakt|kontakt|Dane kontaktowe"/>
+            <add-attribute value="Firma|/firma|firma|Informacje o firmie"/>
+        </put-list-attribute>-->
+    </definition>
+    <definition name="error" extends="masterpage">
+        <put-attribute name="body" value="/WEB-INF/views/errors/500.jsp" />
+    </definition>
+    <definition extends="m-masterpage" name="index-mobile">
+        <put-attribute name="title" value="Podłogi i stolarka" type="string"  />
+        <put-attribute name="pagejs" value="resources/pages/index/page.js" />
+        <put-attribute name="body" value="/WEB-INF/views/index/m-index.jsp" />
+    </definition>
+    
+</tiles-definitions>

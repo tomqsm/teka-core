@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/teka">
+    <Resource auth="Container" 
+              driverClassName="${db.driver.class.name}" 
+              maxActive="20" 
+              maxIdle="${db.maxIdle}" 
+              maxWait="${db.maxWait}" 
+              name="${db.jndi.name}" 
+              password="${db.password}" 
+              type="javax.sql.DataSource" 
+              url="${db.url}" 
+    />
+</Context>
