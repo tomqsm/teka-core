@@ -4,7 +4,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
-import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -15,7 +14,7 @@ import org.junit.Test;
  * 
  * @author toks
  */
-public class ImageUtilsTest extends TestCase {
+public class ImageUtilsTest {
 
   @BeforeClass
   public static void setUpClass() throws Exception {}
