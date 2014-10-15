@@ -25,7 +25,11 @@
     </properties>
 
     <dependencies>
-
+        <dependency>
+            <groupId>biz.letsweb</groupId>
+            <artifactId>image-base64</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <!--
             Core utilities used by other modules.
             Define this if you use Spring Utility APIs (org.springframework.core.*/org.springframework.util.*)

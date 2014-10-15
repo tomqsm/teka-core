@@ -23,19 +23,19 @@ public class JdbcUsersDao {
   }
 
   public User findUserById(int id){
-        String sql = "select * from lksflr.users where id=:id";
+        String sql = "select * from teka.users where id=:id";
         Map<String,Object> params = new HashMap<>();
         params.put("id", id);
         return jdbcTemplate.queryForObject(sql, params, new UserMapper());
     }
 
   public List<User> findAll() {
-    String sql = "select * from LKSFLR.users";
+    String sql = "select * from teka.users";
     return jdbcTemplate.query(sql, new UserMapper());
   }
 
   public void deleteById(int id){
-      String sql = "delete from lksflr.users where id=:id";
+      String sql = "delete from teka.users where id=:id";
       Map<String,Object> params = new HashMap<>();
       params.put("id", id);
       jdbcTemplate.update(sql, params);

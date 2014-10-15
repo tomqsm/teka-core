@@ -17,7 +17,7 @@ public class JdbcIPLoggerDao {
   }
 
   public void insertRecord(IPLoggerLine loggerLine) {
-        String sql = "insert into LKSFLR.IPLOGS values (DEFAULT, :ip, :url, DEFAULT)";
+        String sql = "insert into TEKA.IPLOGS values (DEFAULT, :ip, :url, DEFAULT)";
         Map<String, Object> params = new HashMap<>();
         params.put("ip", loggerLine.getIp());
         params.put("url", loggerLine.getUrl());

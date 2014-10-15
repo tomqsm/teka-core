@@ -23,19 +23,19 @@ public class JdbcPriceLineDao {
   }
 
   public PriceLine findUserById(int id){
-        String sql = "select * from lksflr.prices where id=:id";
+        String sql = "select * from teka.prices where id=:id";
         Map<String,Object> params = new HashMap<>();
         params.put("id", id);
         return jdbcTemplate.queryForObject(sql, params, new PriceLineMapper());
     }
 
   public List<PriceLine> findAll() {
-    String sql = "select * from LKSFLR.prices";
+    String sql = "select * from teka.prices";
     return jdbcTemplate.query(sql, new PriceLineMapper());
   }
 
   public void deleteById(int id){
-      String sql = "delete from lksflr.prices where id=:id";
+      String sql = "delete from teka.prices where id=:id";
       Map<String,Object> params = new HashMap<>();
       params.put("id", id);
       jdbcTemplate.update(sql, params);
