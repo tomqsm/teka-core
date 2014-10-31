@@ -24,7 +24,8 @@
         </put-list-attribute>
     </definition>
     <definition name="btstrp" template="/WEB-INF/tiles/btstrptemplate.jsp">
-        
+        <put-attribute name="title" value="default" type="string" cascade="true"/>
+
     </definition>
     
     <definition name="m-masterpage" template="/WEB-INF/tiles/m-masterpage.jsp">
@@ -34,7 +35,11 @@
     </definition>
     
     <definition extends="btstrp" name="index">
-        
+        <put-attribute name="body" value="/WEB-INF/views/index/firma.jsp" />
+    </definition>
+    <definition extends="btstrp" name="404">
+        <put-attribute name="title" value="Zasób nie znaleziony." type="string"  />
+        <put-attribute name="body" value="/WEB-INF/views/errors/404.jsp" />
     </definition>
 
     <definition extends="masterpage" name="cennik">
@@ -88,7 +93,7 @@
         <put-attribute name="flashAdvert" value="" />
         <put-attribute name="menu" value="" />
         <put-attribute name="breadcrumbs" value="" />
-<!--        <put-list-attribute name="breadcrumbList">
+        <!--        <put-list-attribute name="breadcrumbList">
             <add-attribute value="0"/>
         </put-list-attribute>
         menu format menuDisplay|href|id|breadcrumbDisplay

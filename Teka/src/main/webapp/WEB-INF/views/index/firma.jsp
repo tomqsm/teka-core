@@ -8,3 +8,4 @@
 <%@taglib prefix="t" uri="http://tiles.apache.org/tags-tiles" %>
 <% pageContext.setAttribute("now", new DateTime());%>
 <h1>${pageTitle}</h1>
+something here ${now}

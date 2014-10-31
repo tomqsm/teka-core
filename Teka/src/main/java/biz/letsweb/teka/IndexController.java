@@ -62,7 +62,7 @@ public class IndexController {
   // private Facebook facebook;
 
   @RequestMapping(method = RequestMethod.GET)
-  public String sayHello(ModelMap model, Locale locale) {
+  public String sayHello(ModelMap model, Locale locale) throws Exception {
     model.addAttribute("date", new Date());
     // model.addAttribute("user", user);
     final String message =
@@ -255,12 +255,12 @@ public class IndexController {
     };
   }
 
-  @ExceptionHandler
-  // @ResponseBody
-  public String handleException(Exception ex) {
-    System.out.println(ex.getMessage());
-    return "forward:/500";
-  }
+//  @ExceptionHandler
+//  // @ResponseBody
+//  public String handleException(Exception ex) {
+//    System.out.println(ex.getMessage());
+//    return "forward:/500";
+//  }
 
   public void setMyMessage(Message myMessage) {
     this.myMessage = myMessage;
