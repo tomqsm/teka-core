@@ -22,7 +22,6 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -137,8 +136,7 @@ public class IndexController {
   @Async
   @ResponseStatus(HttpStatus.OK)
   @RequestMapping(value = "/ajax", method = {RequestMethod.GET, RequestMethod.HEAD}, headers = "x-requested-with=XMLHttpRequest")
-  public @ResponseBody
-  AjaxModel ajax(ModelMap model) throws InterruptedException {
+  public @ResponseBody AjaxModel ajax(ModelMap model) throws InterruptedException {
     User user = usersDao.findUserById(1);
     AjaxModel am = new AjaxModel();
     // Thread.sleep(3000);
@@ -150,8 +148,7 @@ public class IndexController {
   @Async
   @ResponseStatus(HttpStatus.OK)
   @RequestMapping(value = "/ajax/prices", method = {RequestMethod.GET, RequestMethod.HEAD}, headers = "x-requested-with=XMLHttpRequest")
-  public @ResponseBody
-  List<PriceLine> ajaxPrices(@RequestParam("tzo") String tzo, ModelMap model) {
+  public @ResponseBody List<PriceLine> ajaxPrices(@RequestParam("tzo") String tzo, ModelMap model) {
     System.out.println(tzo);
     final String DATEFORMAT = "yyyy-MM-dd HH:mm:ss";
     final SimpleDateFormat sdf = new SimpleDateFormat(DATEFORMAT);
@@ -220,8 +217,7 @@ public class IndexController {
   // tutorial
   // https://github.com/spring-projects/spring-mvc-showcase/tree/master/src/main/java/org/springframework/samples/mvc/async
   @RequestMapping("/custom-timeout-handling")
-  public @ResponseBody
-  WebAsyncTask<String> callableWithCustomTimeoutHandling() {
+  public @ResponseBody WebAsyncTask<String> callableWithCustomTimeoutHandling() {
 
     Callable<String> callable = new Callable<String>() {
       @Override
@@ -255,12 +251,12 @@ public class IndexController {
     };
   }
 
-//  @ExceptionHandler
-//  // @ResponseBody
-//  public String handleException(Exception ex) {
-//    System.out.println(ex.getMessage());
-//    return "forward:/500";
-//  }
+  // @ExceptionHandler
+  // // @ResponseBody
+  // public String handleException(Exception ex) {
+  // System.out.println(ex.getMessage());
+  // return "forward:/500";
+  // }
 
   public void setMyMessage(Message myMessage) {
     this.myMessage = myMessage;

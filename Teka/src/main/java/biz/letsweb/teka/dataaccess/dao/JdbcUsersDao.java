@@ -10,7 +10,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Service;
 
 /**
- * 
+ *
  * @author Tomasz
  */
 @Service("usersDao")
@@ -22,9 +22,9 @@ public class JdbcUsersDao {
     this.jdbcTemplate = new NamedParameterJdbcTemplate(dataSource);
   }
 
-  public User findUserById(int id){
+  public User findUserById(int id) {
         String sql = "select * from teka.users where id=:id";
-        Map<String,Object> params = new HashMap<>();
+        Map<String, Object> params = new HashMap<>();
         params.put("id", id);
         return jdbcTemplate.queryForObject(sql, params, new UserMapper());
     }
@@ -35,9 +35,9 @@ public class JdbcUsersDao {
   }
 
   public void deleteById(int id){
-      String sql = "delete from teka.users where id=:id";
+        String sql = "delete from teka.users where id=:id";
       Map<String,Object> params = new HashMap<>();
-      params.put("id", id);
-      jdbcTemplate.update(sql, params);
-  }
+        params.put("id", id);
+        jdbcTemplate.update(sql, params);
+    }
 }

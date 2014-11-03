@@ -10,7 +10,7 @@
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,10 +23,6 @@
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <!--<script src="../../assets/js/ie-emulation-modes-warning.js"></script>-->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -52,7 +48,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Project name</a>
+              <a class="navbar-brand" href="#">letsweb.biz</a>
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
@@ -66,7 +62,7 @@
                     <li><a href="#">Another action</a></li>
                     <li><a href="#">Something else here</a></li>
                     <li class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
+                    <li class="dropdown-header">Articles</li>
                     <li><a href="#">Separated link</a></li>
                     <li><a href="#">One more separated link</a></li>
                   </ul>
@@ -79,7 +75,6 @@
       </div>
     </div>
 
-
     <!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -91,6 +86,7 @@
       </ol>
       <div class="carousel-inner">
         <div class="item active">
+          <!--<img src="data:image/gif;base64,R0lGODlhAAAICRAEAOw==" alt="First slide">-->
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
@@ -125,8 +121,6 @@
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
 
-
-
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -156,9 +150,7 @@ Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id do
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
-
       <!-- START THE FEATURETTES -->
-
       <hr class="featurette-divider">
 
       <div class="row featurette">
@@ -196,9 +188,7 @@ Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id do
       </div>
 
       <hr class="featurette-divider">
-
       <!-- /END THE FEATURETTES -->
-
 
       <!-- FOOTER -->
       <footer>
@@ -208,10 +198,8 @@ Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id do
 
     </div><!-- /.container -->
 
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="<s:url value="/resources/scripts/lib/docs.min.js"/>"></script>

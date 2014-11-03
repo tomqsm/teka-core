@@ -1,5 +1,6 @@
 drop table "USERS";
 drop table prices;
+drop table iplogs;
 CREATE TABLE USERS(
     id INT NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1) CONSTRAINT users_pk PRIMARY KEY,
     fname VARCHAR(100) DEFAULT NULL,

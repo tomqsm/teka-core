@@ -13,13 +13,13 @@ public class PriceLineMapper implements RowMapper<PriceLine> {
 
   @Override
   public PriceLine mapRow(ResultSet rs, int i) throws SQLException {
-    PriceLine user = new PriceLine();
-    user.setId(rs.getInt("id"));
-    user.setService(rs.getString("service"));
-    user.setUnit(rs.getString("unit"));
-    user.setPriceMin(rs.getDouble("priceMin"));
-    user.setPriceMax(rs.getDouble("priceMax"));
-    user.setInserted(rs.getTimestamp("inserted"));
-    return user;
+    PriceLine priceLine = new PriceLine();
+    priceLine.setId(rs.getInt("id"));
+    priceLine.setService(rs.getString("service"));
+    priceLine.setUnit(rs.getString("unit"));
+    priceLine.setPriceMin(rs.getDouble("priceMin"));
+    priceLine.setPriceMax(rs.getDouble("priceMax"));
+    priceLine.setInserted(rs.getTimestamp("inserted"));
+    return priceLine;
   }
 }

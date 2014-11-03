@@ -35,6 +35,8 @@ http://www.springframework.org/schema/security/spring-security-3.2.xsd">
                 p:dataSource-ref="dataSource" />
     <beans:bean id="iploggerDao" class="biz.letsweb.teka.dataaccess.dao.JdbcIPLoggerDao"
                 p:dataSource-ref="dataSource" />
+    <beans:bean id="chronicleDao" class="biz.letsweb.teka.dataaccess.dao.JdbcChronicleDao"
+                p:dataSource-ref="dataSource" />
     <beans:bean id="facebook" class="org.springframework.social.facebook.api.impl.FacebookTemplate" />
     <!--    <beans:bean id="indexController" class="biz.letsweb.teka.IndexController"
     p:facebook-ref="facebook" />-->
@@ -51,7 +53,7 @@ http://www.springframework.org/schema/security/spring-security-3.2.xsd">
         <beans:bean class="org.springframework.web.servlet.theme.ThemeChangeInterceptor"/>
         <beans:bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" 
                     p:paramName="lang"/>
-        <interceptor> 
+<!--        <interceptor> 
             <mapping path="/**" />
             <beans:bean class="biz.letsweb.teka.interceptors.MobileInterceptor" init-method="init">
                 <beans:property name="mobileUserAgents">
@@ -64,7 +66,7 @@ http://www.springframework.org/schema/security/spring-security-3.2.xsd">
                     </beans:list>
                 </beans:property>
             </beans:bean>
-        </interceptor>
+        </interceptor>-->
     </interceptors>
     
     <!--THEMES-->
